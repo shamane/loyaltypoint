@@ -1,0 +1,18 @@
+development: &defaults
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  username: root
+  password:
+  socket: /var/lib/mysql/mysql.sock # /var/run/mysqld/mysqld.sock
+  database: loyaltypoint_development
+
+test:
+  <<: *defaults
+  database: loyaltypoint_test
+
+production:
+  <<: *defaults
+  database:  loyaltypoint_production
+
